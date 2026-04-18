@@ -38,15 +38,20 @@ const gen_tvbox_json = async (srcs: ITvBoxLiveSrc[]): Promise<TVBoxConfig> => {
   } as TVBoxConfig;
 
   j.lives = srcs.map(({ name, f_name }) => ({
-    group: name,
-    channels: [
-      {
-        name,
-        urls: [`${get_custom_url()}/txt/${f_name}.txt`],
-        epg: `https://iptv-sources2.pages.dev/epg/pw-7/{date}/${f_name}.json`,
-        // logo: `https://tv-res.pages.dev/logo/${f_name}.png`,
-      },
-    ],
+    // group: name,
+    // channels: [
+    //   {
+    //     name,
+    //     urls: [`${get_custom_url()}/txt/${f_name}.txt`],
+    //     epg: `https://iptv-sources2.pages.dev/epg/pw-7/{date}/${f_name}.json`,
+    //     // logo: `https://tv-res.pages.dev/logo/${f_name}.png`,
+    //   },
+    // ],
+    name,
+    type: 0,
+    url: `${get_custom_url()}/txt/${f_name}.txt`,
+    epg: `https://iptv-sources2.pages.dev/epg/pw-7/{date}/${f_name}.json`,
+    logo: `https://tv-res.pages.dev/logo/${f_name}.png`,
   }));
 
   return j;
