@@ -23,7 +23,7 @@
 | 来源 | 说明 |
 |------|------|
 | [epg.51zmt.top:8000](http://epg.51zmt.top:8000/) | 央视、卫视及地方频道 |
-| [epg.pw](https://epg.pw/) | 抓取中国地区频道并合并为 [epg_pw.xml](/epg/epg_pw.xml)，并生成 TVBox JSON：`epg/epg_pw/{date}/{name}.json` |
+| [epg.pw](https://epg.pw/) | 抓取中国地区频道列表, 生成 **`epg/pw-7/{date}/{NAME}.json`**（约 7 天滚动窗口）|
 
 ## Channel
 

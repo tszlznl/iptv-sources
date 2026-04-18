@@ -32,7 +32,7 @@
 | 来源 | 说明 |
 |------|------|
 | [epg.51zmt.top:8000](http://epg.51zmt.top:8000/) | 构建时拉取 XMLTV，保存为 `epg/51zmt.xml` 等；再按日期、频道拆成 TVBox JSON（`epg/51zmt/{date}/…`） |
-| [epg.pw](https://epg.pw/) | 抓取中国地区频道列表，逐频道拉取节目并合并为 `epg/epg_pw.xml`；同时生成两类 TVBox JSON：与 `epg_pw.xml` 同结构的 **`epg/epg_pw/{date}/{name}.json`**，以及按「日期 + 大写频道名」的 **`epg/pw-7/{date}/{NAME}.json`**（约 7 天滚动窗口） |
+| [epg.pw](https://epg.pw/) | 抓取中国地区频道列表, 生成 **`epg/pw-7/{date}/{NAME}.json`**（约 7 天滚动窗口） |
 
 ## EPG 使用说明
 
