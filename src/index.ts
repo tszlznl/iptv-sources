@@ -8,7 +8,7 @@ import {
   getContent,
   mergeSources,
   mergeTxts,
-  writeEpgJsonByDate,
+  // writeEpgJsonByDate,
   writeEpgXML,
   writeM3u,
   writeM3uToTxt,
@@ -107,7 +107,7 @@ cleanFiles();
     ) as Array<[string | undefined]>;
     mergeTxts();
     mergeSources();
-    writeEpgJsonByDate();
+    // writeEpgJsonByDate();
     await writeTvBoxLiveJson('tvbox', sources);
     updateChannelsJson(sources, sources_res, epgs_sources);
     updateReadme(sources, sources_res, epgs_sources, epgs_res);
