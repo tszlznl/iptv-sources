@@ -194,14 +194,9 @@ export async function buildEpgPwXml(batchSize = 10, delayMs = 300): Promise<stri
 
         const json = buildPwChannelJson(channel, programmes);
         const currentChannelName = genTvBoxChannelName(json.channel);
-
-        await writeFile(
-          path.join(savePath as string, `${currentChannelName}.json`),
-          JSON.stringify(json, null, 2)
-        );
-        console.info(
-          `[EPG.PW] Saved EPG for channel ${json.channel} (${programmes.length} programmes)`
-        );
+        const savedFullPath = path.join(savePath, `${currentChannelName}.json`);
+        await writeFile(savedFullPath, JSON.stringify(json, null, 2));
+        console.info(`[EPG.PW] Saved EPG for channel ${json.channel} to (${savedFullPath})`);
         programmeNodes.push(...programmes);
       });
       await Promise.all(writePromises);
